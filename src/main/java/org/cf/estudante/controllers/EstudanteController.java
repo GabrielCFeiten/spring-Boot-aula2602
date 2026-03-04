@@ -34,5 +34,10 @@ public class EstudanteController {
         return estudanteService.findByIdEstudante(id);
     }
 
+    @PutMapping("/{id}")
+    public EstudanteModel updateEstudante(@PathVariable Long id, @RequestBody EstudanteModel estudanteModel) {
+        return estudanteService.updateEstudante(id, estudanteModel);
+    }
+
 
 }
